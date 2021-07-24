@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+    
+    
+   <bean name="emp1" class="com.sping.collection.Employee"  init-method = "init"  destroy-method = "destroy">
+   <property name="name" value="krithiga"/>
+  
+   <property name="phones"> 
+   <list>
+    <value>9809809799</value>
+     <value>9098908997</value>
+      <value>9897878969</value>
+    
+   </list>
+   </property>
+   
+   <property name="address">
+   <set>
+   <value>chennai</value>
+    <value>vellore</value>
+     <value>salem</value>
+
+   </set>
+   </property>
+   
+   <property name="courses">
+   <map>
+   <entry key="java" value="2months"/>
+   <entry key="python" value="1-2months"/>
+   <entry key="c" value="1month"/>
+   </map>
+   </property>
+   
+   </bean>
+    </beans>

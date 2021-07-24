@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+    
+    
+    <bean id="emp1" class="com.spring.Employee"  init-method = "init"  destroy-method = "destroy">
+    <property name="eId" value="101"/>
+     <property name="eName" value="krithiga"/>
+     <property name="eAddress" value="chennai"/>
+      <property name="salary" value="10000"/>
+     <property name="department" ref="deptName"/> 
+    
+    </bean>  
+    
+     <bean id="emp2" class="com.spring.Employee" autowire="byName">
+    <property name="eId" value="101"/>
+     <property name="eName" value="Divya"/>
+     <property name="eAddress" value="chennai"/>
+      <property name="salary" value="20000"/>
+     
+    
+    </bean>  
+    
+    
+     <bean id="emp3" class="com.spring.Employee" autowire="byType">
+    <property name="eId" value="101"/>
+     <property name="eName" value="yazhini"/>
+     <property name="eAddress" value="chennai"/>
+      <property name="salary" value="15000"/>
+    
+    </bean>  
+     <bean id="id1" class="com.spring.Employee" scope="singleton">
+     <property name="eName" value="Krithiga"/>   
+    </bean>  
+      
+     <bean id="id2" class="com.spring.Employee" scope="prototype">
+     <property name="eName" value="hello"/>   
+    </bean>  
+    
+   
+     <bean id="deptName" class="com.spring.Department" scope="prototype">
+     <property name="dName" value="css"/>   
+    </bean> 
+    
+    
+    
+    </beans>
