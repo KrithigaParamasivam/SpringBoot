@@ -12,9 +12,7 @@ import javax.validation.constraints.NotBlank;
 //import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-//@Data
-//@AllArgsConstructor
-//@NoArgsConstructor
+
 @Entity
 @Table(name = "product_Tbl")
 public class Product {
@@ -22,10 +20,8 @@ public class Product {
     @Id
    // @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    @NotBlank(message="Name is mandatory")
     @Size(min=5,message="Name must be 5 characters")
     private String name;
-    //@NotBlank(message="quantity is mandatory")
     private int quantity;
     private double price;
 	public int getId() {
